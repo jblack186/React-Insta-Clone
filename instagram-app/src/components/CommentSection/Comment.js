@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from '../CommentSection/Image';
+
 
 class Comment extends React.Component {
 constructor(props){
@@ -6,17 +8,15 @@ constructor(props){
     this.state = {
         comm: props.comment.comments
     }
+    console.log(this.state.username)
 }
     render(){
     return (
-        <div>
+        <div className="postContainer">
+
             {console.log(this.state)}
-            <p>{this.state.comm.username}</p> <p>{this.state.comm.text}</p>
-            <form>
-                <input
-                placeholder="Add a comment"
-                />
-            </form>
+            <p className="textName"><span className="username">{this.state.comm.username} </span>{this.state.comm.text}</p> 
+           
         </div>
     )
 }

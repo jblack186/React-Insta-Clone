@@ -1,0 +1,33 @@
+.search-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    position: sticky;
+    top: 0rem;
+    background-color: white;
+}
+
+.iconSearch{
+   width: 200px;
+}
+
+.name{
+    font-size: 1rem;
+    padding: 0;
+}
+
+.line{
+    border-right: 1px solid black;
+    height: 20px;
+    margin: 0;
+}
+
+.icon-name{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

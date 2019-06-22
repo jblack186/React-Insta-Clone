@@ -2,30 +2,40 @@ import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
+import Username from './components/SearchBar/Username';
 
-function App() {
+
+
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      data: []
+      
+    }
+    
+  }
+
+componentDidMount(){
+  this.setState({data : dummyData})
+  return <PostContainer data={this.state.data} />
+}
+
+  render(){
   return (
     <div className="App">
+      {dummyData.map(item => {
+      return <Username posts={item} />
+    })}
     {dummyData.map(item => {
       return <PostContainer posts={item} />
     })}
-   { console.log(dummyData)};
-      <header className="App-header">
-        <p>
-      
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+
     </div>
   );
 }
-
+}
 export default App;
